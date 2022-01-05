@@ -1,0 +1,36 @@
+/* =======================================================
+	mixin：media queryの管理
+
+	@include mq-up / mq-down
+	----------------------------------------
+	$breakpoint-up：min-width ×××× px以上の場合
+	$breakpoint-down：max-width ×××× px未満の場合
+	$breakpoint：breakpointの指定（ex. md）
+======================================================= */
+
+// 変数設定
+$breakpoint-up: (
+	"sm": "screen and (min-width: 400px)",
+	"md": "screen and (min-width: 768px)",
+	"lg": "screen and (min-width: 1001px)",
+	"header": "screen and (min-width: 768px)",
+) !default;
+
+$breakpoint-down: (
+	"sm": "screen and (max-width: 399px)",
+	"md": "screen and (max-width: 767px)",
+	"lg": "screen and (max-width: 1000px)",
+	"header": "screen and (max-width: 767px)",
+) !default;
+
+
+@mixin mq-up($breakpoint: md) {
+	@media #{map-get($breakpoint-up, $breakpoint)} {
+		@content;
+	}
+}
+@mixin mq-down($breakpoint: md) {
+	@media #{map-get($breakpoint-down, $breakpoint)} {
+		@content;
+	}
+}

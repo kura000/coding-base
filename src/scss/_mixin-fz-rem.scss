@@ -1,0 +1,22 @@
+/* =======================================================
+	mixin：font-sizeをremで一括指定する（依存：func-strip-unit）
+
+	@include m-fontsize-rem
+	----------------------------------------
+	$min-width：media queryで設定したいmin-width（ex. 768px）
+	$pc：pcのフォントサイズ（ex. 16px）
+	$sp：spのフォントサイズ（ex. 12px）
+======================================================= */
+
+// 変数設定
+$min-width: 768px;
+
+@mixin m-fz-rem($pc, $sp){
+	@media screen and (min-width: 768px){
+		font-size: calc((f-strip-unit($pc) / 10) * 1rem);
+	}
+	@media screen and (max-width: (f-strip-unit($min-width) - 1 + "px")){
+		font-size: calc((f-strip-unit($sp) / 10) * 1rem);
+	}
+}
+

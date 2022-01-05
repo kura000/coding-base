@@ -1,0 +1,30 @@
+/*=======================================================
+	アニメーション：フェードイン 
+
+	1. フェードインさせたい要素に「u-fade-in / u-fade-up」を付与する
+	2. 表示するタイミングに、js側で「is-show」を付与する
+========================================================*/
+
+// 変数設定
+$duration: 0.7s;
+
+// fadeIn その場で表示
+.u-fade-in{
+	opacity: 0;
+	transition: opacity 1s;
+	&.is-show{
+		opacity: 1;
+	}
+}
+
+// fadeIn-up 下から浮き上がるように表示
+.u-fade-up{
+	opacity: 0;
+	transform: translateY(40px);
+	transition: opacity 1s, transform 1s;
+	&.is-show{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+

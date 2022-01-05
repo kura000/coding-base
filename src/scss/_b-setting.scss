@@ -1,0 +1,49 @@
+/*=======================================================
+
+	ベース
+
+========================================================*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: $font-base;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	letter-spacing: 0.065em;
+	-webkit-text-size-adjust: 100%;
+}
+main{
+	display: block;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+img {
+	backface-visibility: hidden;
+	height: auto;
+	image-rendering: -webkit-optimize-contrast;
+	max-width: 100%;
+	vertical-align: bottom;
+}
+a {
+	display: inline-block;
+	backface-visibility: hidden;
+	color: inherit;
+	text-decoration: none;
+	transition: opacity 0.5s;
+	&:hover {
+		opacity: .7;
+		cursor: pointer;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}

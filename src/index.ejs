@@ -1,0 +1,20 @@
+<% const path = "./"; %>
+<% const meta = {
+	title:"このページのタイトル",
+	desc:"120文字以内"}
+%>
+
+<%- include(path + 'templates/_head', {path:path, meta:meta}) %>
+
+<body>
+	<div class="wrapper">
+		<%- include(path + 'templates/_l-header', {path:path}) %>
+		<main>
+			<div class="u-fade-up is-show">あああああ</div>
+			<div class="font-vw">フォントサイズvwのテスト</div>
+			<div class="font-rem">フォントサイズremのテスト</div>
+		</main>
+		<%- include(path + 'templates/_l-footer', {path:path}) %>
+	</div>
+</body>
+</html>

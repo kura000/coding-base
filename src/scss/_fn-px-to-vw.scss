@@ -1,0 +1,21 @@
+/* =======================================================
+	function：px を vw に変換
+
+	@function f-vw-pc / f-vw-sp
+	----------------------------------------
+	$px：vwに変換するpxの値（ex. 60）
+	$base-pc：基準とするPCデザインカンプのサイズ（ex. 1920）
+	$base-sp：基準とするSPデザインカンプのサイズ（ex. 375）
+	@return：vwに変換された値（ex. 1920）
+======================================================= */
+
+$base-pc: $design-pc;
+$base-sp: $design-sp;
+
+@function f-vw-pc($px) {
+	@return calc($px / $base-pc) * 100vw;
+}
+
+@function f-vw-sp($px) {
+	@return calc($px / $base-sp) * 100vw;
+}

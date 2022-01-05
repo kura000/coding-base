@@ -1,0 +1,20 @@
+/*=======================================================
+
+	footer
+
+========================================================*/
+.l-footer {
+	background-color: $color-footer;
+	margin-top: auto;
+	padding: f-vw-pc(18) 0 f-vw-pc(16);
+	small{
+		display: block;
+		color: $color-black;
+		text-align: center;
+		@include m-fz-vw(16, 12);
+		@include mq-down(md){
+			font-weight: 300;
+			padding: 15px 10px;
+		}
+	}
+}

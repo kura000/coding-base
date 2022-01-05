@@ -1,0 +1,35 @@
+// base
+@import "./b-reset";
+@import "./b-variable";
+@import "./b-setting";
+// function
+@import "./fn-strip-unit";
+@import "./fn-px-to-vw";
+// mixin
+@import "./mixin-fz-vw";
+@import "./mixin-fz-rem";
+@import "./mixin-mq";
+// utility
+@import "./u-utility";
+@import "./u-anime-fade";
+// layout
+@import "./l-header";
+@import "./l-footer";
+// component
+@import "./c-nav-trigger";
+// page
+
+
+
+.anime-fade-up{
+}
+.font-vw{
+	@include m-fz-vw(30px,16px);
+}
+.font-rem{
+	margin-top: f-vw-pc(60);
+	@include m-fz-rem(30px,16px);
+	@include mq-down(md){
+		color: blue;
+	}
+}

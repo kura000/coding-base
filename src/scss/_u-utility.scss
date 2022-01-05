@@ -1,0 +1,29 @@
+/*=======================================================
+
+	utility
+
+========================================================*/
+
+// inner
+.u-inner {
+	width: 100%;
+	margin: auto;
+	max-width: 1400px;
+	padding: 0 30px;
+	@include mq-down(md){
+		padding: 0 20px;
+	}
+}
+
+// pc / sp のみ表示
+.u-pcOnly {
+	@include mq-down(md) {
+		display: none !important;
+	}
+}
+.u-spOnly {
+	@include mq-up(md) {
+		display: none !important;
+	}
+}
+

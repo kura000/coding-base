@@ -1,0 +1,26 @@
+/* =======================================================
+	mixin：font-sizeをvwで一括指定する（依存：func-strip-unit）
+
+	@include m-fontsize-vw
+	----------------------------------------
+	$base：設定したいフォントサイズ（ex. 1920px）
+	$max：vwを解除するwindow幅上限（ex. 1920px）
+	$min：vwを解除するwindow幅下限（ex. 767px）
+	$pc：pcのフォントサイズ（ex. 16px）
+	$sp：spのフォントサイズ（ex. 12px）
+======================================================= */
+
+// 変数設定
+$base: $design-pc;
+$max: $design-pc;
+$min: 768px;
+
+@mixin m-fz-vw($pc, $sp){
+	font-size: calc((f-strip-unit($pc) / f-strip-unit($base)) * 100vw);
+	@media screen and (min-width: #{$max}){
+		font-size: calc((f-strip-unit($pc) / 10) * 1rem);
+	}
+	@media screen and (max-width: #{$min}){
+		font-size: calc((f-strip-unit($sp) / 10) * 1rem);
+	}
+}

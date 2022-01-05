@@ -1,0 +1,17 @@
+//https://css-tricks.com/snippets/sass/strip-unit-function/
+
+/* =======================================================
+	function：数字から単位を取り除く
+
+	@function f-strip-unit
+	----------------------------------------
+	$number：単位を取り除きたい値（ex. 1920px）
+	@return：単位が取り除かれた数値（ex. 1920）
+======================================================= */
+
+@function f-strip-unit ($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+	@return $number;
+}

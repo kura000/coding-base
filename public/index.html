@@ -1,68 +1,78 @@
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-	<meta name="format-detection" content="telephone=no, email=no, address=no">
-	<title>このページのタイトル</title>
-	<meta name="description" content="120文字以内" />
-	<meta name="keywords" content="" />
-	<meta property="og:url" content="このページのURL" />
-	<meta property="og:type" content="TOPページはwebsite、子ページはarticle" />
-	<meta property="og:title" content="このページのタイトル" />
-	<meta property="og:description" content="120文字以内" />
-	<meta property="og:site_name" content="サイト名" />
-	<meta property="og:image" content="1200×630以上推奨、絶対パスで指定" />
-	<meta name="twitter:card" content="summary or summary_large_image" />
-	<meta name="twitter:site" content="@ユーザー名" />
-	<link rel="icon" href="./static/favicon.ico" />
-	<link rel="apple-touch-icon" type="image/png" href="./static/apple-touch-icon.png" sizes="180x180" />
-<link href="./css/style.css" rel="stylesheet"></head>
+  <head
+    prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"
+  >
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta
+      name="format-detection"
+      content="telephone=no, email=no, address=no"
+    />
+    <title>このページのタイトル</title>
+    <meta name="description" content="120文字以内" />
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="このページのURL" />
+    <meta property="og:type" content="TOPページはwebsite、子ページはarticle" />
+    <meta property="og:title" content="このページのタイトル" />
+    <meta property="og:description" content="120文字以内" />
+    <meta property="og:site_name" content="サイト名" />
+    <meta property="og:image" content="1200×630以上推奨、絶対パスで指定" />
+    <meta name="twitter:card" content="summary or summary_large_image" />
+    <meta name="twitter:site" content="@ユーザー名" />
+    <link rel="icon" href="./static/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="./static/apple-touch-icon.png"
+      sizes="180x180"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
 
+  <body>
+    <div class="wrapper">
+      <header class="l-header">
+        <div class="l-header__inner">
+          <div class="l-header__left">
+            <div class="l-header__logo">
+              <img src="/img/common/logo_dummy_140x85.png" alt="" />
+            </div>
+          </div>
+          <div class="l-header__right">
+            <div class="l-header__btn">
+              <a class="c-nav-trigger" id="js-nav-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
+            <div class="l-header__menu">
+              <ul class="l-header__menuList">
+                <li class="l-header__menuItem"><a href="/">メニュー１</a></li>
+                <li class="l-header__menuItem"><a href="/">メニュー２</a></li>
+                <li class="l-header__menuItem"><a href="/">メニュー３</a></li>
+                <li class="l-header__menuItem"><a href="/">メニュー４</a></li>
+                <li class="l-header__menuItem"><a href="/">メニュー５</a></li>
+                <li class="l-header__menuItem"><a href="/">メニュー６</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
 
-<body>
-	<div class="wrapper">
-		<header class="l-header">
-	<div class="l-header__inner">
-		<div class="l-header__left">
-			<div class="l-header__logo">
-				<img src="/img/common/logo_dummy_140x85.png" alt="">
-			</div>
-		</div>
-		<div class="l-header__right">
-			<div class="l-header__btn">
-				<a class="c-nav-trigger" id="js-nav-trigger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</a>
-			</div>
-			<div class="l-header__menu">
-				<ul class="l-header__menuList">
-					<li class="l-header__menuItem"><a href="/">メニュー１</a></li>
-					<li class="l-header__menuItem"><a href="/">メニュー２</a></li>
-					<li class="l-header__menuItem"><a href="/">メニュー３</a></li>
-					<li class="l-header__menuItem"><a href="/">メニュー４</a></li>
-					<li class="l-header__menuItem"><a href="/">メニュー５</a></li>
-					<li class="l-header__menuItem"><a href="/">メニュー６</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</header>
-
-		<main>
-			<div class="u-fade-up is-show">あああああ</div>
-			<div class="font-vw">フォントサイズvwのテスト</div>
-			<div class="font-rem">フォントサイズremのテスト</div>
-		</main>
-		<footer class="l-footer">
-	<small>©︎copyright</small>
-</footer>
-
-	</div>
-<script src="js/app.bundle.js"></script></body>
+      <main>
+        <div class="u-fade-up is-show">あああああ</div>
+        <div class="font-vw">フォントサイズvwのテスト</div>
+        <div class="font-rem">フォントサイズremのテスト</div>
+      </main>
+      <footer class="l-footer">
+        <small>©︎copyright</small>
+      </footer>
+    </div>
+    <script src="js/app.bundle.js"></script>
+  </body>
 </html>
